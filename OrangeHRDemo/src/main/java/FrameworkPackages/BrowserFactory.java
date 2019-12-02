@@ -12,13 +12,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
 	
-	public static WebDriver driver = null;
+	static WebDriver driver = null;
 	
 	public BrowserFactory() {				//Contractor 
 		
 	}
 	
-	public static WebDriver getDriver() {
+	public WebDriver getDriver() {
 		if(driver==null) {
 			ChromeOptions options = new ChromeOptions();						//Creating an object of chrome options
 			options.addArguments("--disable-notifications");					//Setting an argument to disable notifications in the browser
