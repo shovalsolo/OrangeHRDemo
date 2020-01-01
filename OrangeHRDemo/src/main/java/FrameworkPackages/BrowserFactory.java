@@ -12,53 +12,46 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
 	
-	static WebDriver driver = null;
 	
-	public BrowserFactory() {				//Contractor 
+	public static WebDriver driver = null;
+	
+	
+	public void setUpDriver(String browserName) {
+		System.out.println("Browser name is :"+browserName);
+		System.out.println("Thread id : " +Thread.currentThread().getId());
+		String projectPath = System.getProperty("user.dir");		// creating a parameter of the path to the chrome driver
+
 		
-	}
-	
-	public WebDriver getDriver() {
-		if(driver==null) {
-			ChromeOptions options = new ChromeOptions();						//Creating an object of chrome options
-			options.addArguments("--disable-notifications");					//Setting an argument to disable notifications in the browser
-			options.setPageLoadStrategy(PageLoadStrategy.NONE);					//Setting PageLoadStrategy to none preventing the page from loading while executing
-			WebDriverManager.chromedriver().setup();							//Setting the WebDriverManager
-			driver = new ChromeDriver(options);									//Setting the driver to ChromeDriver
-			driver.manage().window().maximize();								//Setting the window to maximum
-			driver.manage().deleteAllCookies(); 								//Deleting all the cookies
-			driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);	//Setting implicitlyWait of 45 seconds
-			driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);	//Setting pageLoadTimeout of 45 seconds 
-		}
-		return driver;
-	}
-	public static WebDriver getDriver(String browserName) {
-		if(driver==null) {
-			if(browserName.equalsIgnoreCase("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				driver.manage().window().maximize();								//Setting the window to maximum
-				driver.manage().deleteAllCookies(); 								//Deleting all the cookies
-				driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);	//Setting implicitlyWait of 45 seconds
-				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);	//Setting pageLoadTimeout of 45 seconds 
+		try {
+			
+			if(browserName.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\chromedriver\\chromedriver.exe");	//the location of the driver
+				driver = new ChromeDriver();
+				Thread.sleep(4000);	
+				System.out.println("Set Up chrome Driver passed");
 			}
-			else if (browserName.equalsIgnoreCase("ie")) {
-				WebDriverManager.iedriver().setup();
-				driver = new InternetExplorerDriver();								//Setting the driver to IE
-				driver.manage().window().maximize();								//Setting the window to maximum
-				driver.manage().deleteAllCookies(); 								//Deleting all the cookies
-				driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);	//Setting implicitlyWait of 45 seconds
-				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);	//Setting pageLoadTimeout of 45 seconds
+				
+				else if(browserName.equalsIgnoreCase("firefox")) {
+					System.setProperty("webdriver.gecko.driver", projectPath+"\\drivers\\firefox\\geckodriver.exe");	//the location of the driver
+					driver = new FirefoxDriver();
+					Thread.sleep(4000);	
+					System.out.println("Set Up firefox Driver passed");
+				}
+				
+				else if(browserName.equalsIgnoreCase("ie")) {
+					System.setProperty("webdriver.ie.driver", projectPath+"\\drivers\\iedriver\\IEDriverServer.exe");	//the location of the driver
+					driver = new InternetExplorerDriver();
+					Thread.sleep(4000);	
+					System.out.println("Set Up ie Driver passed");
+				}
 			}
-			else {
-				WebDriverManager.chromedriver().setup();							//Setting the WebDriverManager
-				driver = new ChromeDriver();										//Setting the driver to ChromeDriver
-				driver.manage().window().maximize();								//Setting the window to maximum
-				driver.manage().deleteAllCookies(); 								//Deleting all the cookies
-				driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);	//Setting implicitlyWait of 45 seconds
-				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);	//Setting pageLoadTimeout of 45 seconds
-			}
-		}
-		return driver;
+			
+		catch (Exception e) {
+			System.out.println("Set Up Driver failed");
+			System.out.println("Message is " + e.getMessage());
+			System.out.println("Cause is " + e.getCause());
+		}	
+		
 	}
 	
 }
