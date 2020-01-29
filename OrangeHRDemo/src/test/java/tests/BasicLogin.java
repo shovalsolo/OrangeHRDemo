@@ -3,10 +3,13 @@
  */
 
 package tests;
-import baseUtilClass.*;
+import baseUtilClass.*;										//To use WebDriverInit , ScreenshotManager
+import screenShotPrintScreen.ScreenshotManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -52,6 +55,14 @@ public class BasicLogin {
 			System.out.println("Message is " + e.getMessage());								//Message of the exception
 			System.out.println("Cause is " + e.getCause());									//Cause of the exception
 		}
+	}
+	
+	@AfterMethod														//Will run after every function %%%
+	public void tearDown(ITestResult result) {
+		if (ITestResult.FAILURE == result.getStatus()) {
+			ScreenshotManager.cuptureScreenshot(driver , result.getName());	// %%% This is calling ScreenshotManager.cuptureScreenshot with file name and the WebDriver to get a screenshot with the name of the function that was failed
+		}
+		driver.quit();
 	}
 	
 	@AfterClass																				//This will run after the class
