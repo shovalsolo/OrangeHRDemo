@@ -44,7 +44,6 @@ public class BasicLogin {
 			Reporter.log("=======Login Started=======",true);
 			driver.get("https://opensource-demo.orangehrmlive.com/");
 			Thread.sleep(2000);																//Wait to see the results
-			ScreenshotManager.cuptureScreenshot(driver , "Login-Screen");					//Tacking a screen shot with the name of Login-Screen
 			driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("Admin");	//Sending keys to field
 			driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("admin123");//Sending keys to field
 			driver.findElement(By.xpath("//input[@id='btnLogin']")).sendKeys(Keys.RETURN);	//Clicking on the button
