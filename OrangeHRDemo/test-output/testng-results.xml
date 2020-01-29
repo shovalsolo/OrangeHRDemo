@@ -20,18 +20,21 @@
       <![CDATA[=======Login Ended=======]]>
     </line>
     <line>
+      <![CDATA[=======checkError Started=======]]>
+    </line>
+    <line>
       <![CDATA[=======tearDown Started=======]]>
     </line>
     <line>
       <![CDATA[=======tearDown Ended=======]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17485" started-at="2020-01-28T21:49:41Z" finished-at="2020-01-28T21:49:58Z">
+  <suite name="Default suite" duration-ms="16986" started-at="2020-01-29T21:35:10Z" finished-at="2020-01-29T21:35:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17485" started-at="2020-01-28T21:49:41Z" finished-at="2020-01-28T21:49:58Z">
+    <test name="Default test" duration-ms="16986" started-at="2020-01-29T21:35:10Z" finished-at="2020-01-29T21:35:27Z">
       <class name="tests.BasicLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.BasicLogin@14bf9759]" name="setUp" is-config="true" duration-ms="11196" started-at="2020-01-28T21:49:41Z" finished-at="2020-01-28T21:49:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.BasicLogin@5f341870]" name="setUp" is-config="true" duration-ms="10552" started-at="2020-01-29T21:35:10Z" finished-at="2020-01-29T21:35:21Z">
           <reporter-output>
             <line>
               <![CDATA[=======setUp Started=======]]>
@@ -47,7 +50,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginToOrangeHR()[pri:0, instance:tests.BasicLogin@14bf9759]" name="loginToOrangeHR" duration-ms="5488" started-at="2020-01-28T21:49:52Z" finished-at="2020-01-28T21:49:58Z">
+        <test-method status="PASS" signature="loginToOrangeHR()[pri:0, instance:tests.BasicLogin@5f341870]" name="loginToOrangeHR" duration-ms="5738" started-at="2020-01-29T21:35:21Z" finished-at="2020-01-29T21:35:27Z">
           <reporter-output>
             <line>
               <![CDATA[=======Login Started=======]]>
@@ -57,7 +60,21 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginToOrangeHR -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.BasicLogin@14bf9759]" name="tearDown" is-config="true" duration-ms="777" started-at="2020-01-28T21:49:58Z" finished-at="2020-01-28T21:49:58Z">
+        <test-method status="PASS" signature="checkError(org.testng.ITestResult)[pri:0, instance:tests.BasicLogin@5f341870]" name="checkError" is-config="true" duration-ms="3" started-at="2020-01-29T21:35:27Z" finished-at="2020-01-29T21:35:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginToOrangeHR status=SUCCESS method=BasicLogin.loginToOrangeHR()[pri:0, instance:tests.BasicLogin@5f341870] output========Login Started=======]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[=======checkError Started=======]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- checkError -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.BasicLogin@5f341870]" name="tearDown" is-config="true" duration-ms="673" started-at="2020-01-29T21:35:27Z" finished-at="2020-01-29T21:35:27Z">
           <reporter-output>
             <line>
               <![CDATA[=======tearDown Started=======]]>

@@ -31,6 +31,7 @@ public class BasicLogin {
 		} 
 		catch (Exception e) {
 			Reporter.log("=======setUp Failed=======",true);
+			ScreenshotManager.cuptureScreenshot(driver , "setUp-Failed");
 			e.printStackTrace();
 			System.out.println("Message is " + e.getMessage());								//Message of the exception
 			System.out.println("Cause is " + e.getCause());									//Cause of the exception
@@ -43,6 +44,7 @@ public class BasicLogin {
 			Reporter.log("=======Login Started=======",true);
 			driver.get("https://opensource-demo.orangehrmlive.com/");
 			Thread.sleep(2000);																//Wait to see the results
+			ScreenshotManager.cuptureScreenshot(driver , "Login-Screen");					//Tacking a screen shot with the name of Login-Screen
 			driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("Admin");	//Sending keys to field
 			driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("admin123");//Sending keys to field
 			driver.findElement(By.xpath("//input[@id='btnLogin']")).sendKeys(Keys.RETURN);	//Clicking on the button
@@ -51,18 +53,11 @@ public class BasicLogin {
 		} 
 		catch (Exception e) {
 			Reporter.log("=======loginToOrangeHR Failed=======",true);
+			ScreenshotManager.cuptureScreenshot(driver , "loginToOrangeHR-Failed");
 			e.printStackTrace();
 			System.out.println("Message is " + e.getMessage());								//Message of the exception
 			System.out.println("Cause is " + e.getCause());									//Cause of the exception
 		}
-	}
-	
-	@AfterMethod														//Will run after every function %%%
-	public void tearDown(ITestResult result) {
-		if (ITestResult.FAILURE == result.getStatus()) {
-			ScreenshotManager.cuptureScreenshot(driver , result.getName());	// %%% This is calling ScreenshotManager.cuptureScreenshot with file name and the WebDriver to get a screenshot with the name of the function that was failed
-		}
-		driver.quit();
 	}
 	
 	@AfterClass																				//This will run after the class
@@ -76,6 +71,7 @@ public class BasicLogin {
 		} 
 		catch (Exception e) {
 			Reporter.log("=======tearDown Failed=======",true);
+			ScreenshotManager.cuptureScreenshot(driver , "tearDown-Failed");
 			e.printStackTrace();
 			System.out.println("Message is " + e.getMessage());								//Message of the exception
 			System.out.println("Cause is " + e.getCause());									//Cause of the exception
