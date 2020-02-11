@@ -17,7 +17,10 @@
       <![CDATA[=======Login Started=======]]>
     </line>
     <line>
-      <![CDATA[=======loginToOrangeHR Failed=======]]>
+      <![CDATA[=======loginToOrangeHRM Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======Login Ended=======]]>
     </line>
     <line>
       <![CDATA[=======tearDown Started=======]]>
@@ -26,12 +29,12 @@
       <![CDATA[=======tearDown Ended=======]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59038" started-at="2020-01-29T21:42:09Z" finished-at="2020-01-29T21:43:08Z">
+  <suite name="Default suite" duration-ms="18755" started-at="2020-02-11T21:50:00Z" finished-at="2020-02-11T21:50:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59038" started-at="2020-01-29T21:42:09Z" finished-at="2020-01-29T21:43:08Z">
-      <class name="tests.BasicLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.BasicLogin@14bf9759]" name="setUp" is-config="true" duration-ms="10499" started-at="2020-01-29T21:42:09Z" finished-at="2020-01-29T21:42:19Z">
+    <test name="Default test" duration-ms="18755" started-at="2020-02-11T21:50:00Z" finished-at="2020-02-11T21:50:19Z">
+      <class name="tests.VerifyLogin">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.VerifyLogin@14bf9759]" name="setUp" is-config="true" duration-ms="10234" started-at="2020-02-11T21:50:00Z" finished-at="2020-02-11T21:50:10Z">
           <reporter-output>
             <line>
               <![CDATA[=======setUp Started=======]]>
@@ -47,17 +50,20 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginToOrangeHR()[pri:0, instance:tests.BasicLogin@14bf9759]" name="loginToOrangeHR" duration-ms="47866" started-at="2020-01-29T21:42:19Z" finished-at="2020-01-29T21:43:07Z">
+        <test-method status="PASS" signature="loginToOrangeHR()[pri:0, instance:tests.VerifyLogin@14bf9759]" name="loginToOrangeHR" duration-ms="7819" started-at="2020-02-11T21:50:10Z" finished-at="2020-02-11T21:50:18Z">
           <reporter-output>
             <line>
               <![CDATA[=======Login Started=======]]>
             </line>
             <line>
-              <![CDATA[=======loginToOrangeHR Failed=======]]>
+              <![CDATA[=======loginToOrangeHRM Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======Login Ended=======]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginToOrangeHR -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.BasicLogin@14bf9759]" name="tearDown" is-config="true" duration-ms="654" started-at="2020-01-29T21:43:07Z" finished-at="2020-01-29T21:43:08Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.VerifyLogin@14bf9759]" name="tearDown" is-config="true" duration-ms="682" started-at="2020-02-11T21:50:18Z" finished-at="2020-02-11T21:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[=======tearDown Started=======]]>
@@ -67,7 +73,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.BasicLogin -->
+      </class> <!-- tests.VerifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
