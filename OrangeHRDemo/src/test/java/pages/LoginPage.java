@@ -1,5 +1,5 @@
 /**
- * @author Solomon
+b * @author Solomon
  * Class LoginPage that contains all the Login elements and methods of LoginPage to OrangeHRM system
  */
 package pages;
@@ -13,7 +13,7 @@ public class LoginPage {
 	WebDriver driver;
 	
 	//Getting all the page objects to test
-	By username = By.xpath("//input[@id='txtUsername']");					//
+	By username = By.xpath("//input[@id='txtUsername']");					//Locating objects
 	By password = By.xpath("//input[@id='txtPassword']");					//
 	By loginButton = By.xpath("//input[@id='btnLogin']");					//
 	By forgotPassword = By.xpath("//*[@id=\'forgotPasswordLink\']/a");		//
@@ -25,7 +25,7 @@ public class LoginPage {
 	By logoTweeter = By.xpath("//a[3]//img[1]");							//
 	By logoYoutube = By.xpath("//a[4]//img[1]");							//
 
-	public LoginPage(WebDriver driver) {													//Constructor that is getting the WebDriver
+	public LoginPage(WebDriver driver) {									//Constructor that is getting the WebDriver
 		this.driver=driver;													//Initializing the WebDriver
 	}
 	
