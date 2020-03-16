@@ -1,6 +1,6 @@
 /**
-b * @author Solomon
- * Class LoginPage that contains all the Login elements and methods of LoginPage to OrangeHRM system
+ * @author Solomon
+ * Class LoginPage that contains all the Login elements and methods of Login Page to OrangeHRM system
  */
 package pages;
 
@@ -13,17 +13,17 @@ public class LoginPage {
 	WebDriver driver;
 	
 	//Getting all the page objects to test
-	By username = By.xpath("//input[@id='txtUsername']");					//Locating objects
-	By password = By.xpath("//input[@id='txtPassword']");					//
-	By loginButton = By.xpath("//input[@id='btnLogin']");					//
-	By forgotPassword = By.xpath("//*[@id=\'forgotPasswordLink\']/a");		//
-	By redLoginButton = By.xpath("//*[@id='openIdLogin']");					//
-	By bottomDropdown = By.xpath("//*[@id=\'openIdProvider\']/option");		//
-	By linkOrangeHRM = By.xpath("//a[contains(text(),'OrangeHRM, Inc')]");	//
-	By logolinkedin = By.xpath("//a[1]//img[1]");							//
-	By logoFacebook = By.xpath("//a[2]//img[1]");							//
-	By logoTweeter = By.xpath("//a[3]//img[1]");							//
-	By logoYoutube = By.xpath("//a[4]//img[1]");							//
+	By username = By.xpath("//input[@id='txtUsername']");					//Locating Username object
+	By password = By.xpath("//input[@id='txtPassword']");					//Locating Password object
+	By loginButton = By.xpath("//input[@id='btnLogin']");					//Locating Login button object
+	By forgotPassword = By.xpath("//*[@id=\'forgotPasswordLink\']/a");		//Locating forgot Password Link object
+	By redLoginButton = By.xpath("//*[@id='openIdLogin']");					//Locating openIdLogin object
+	By bottomDropdown = By.xpath("//*[@id=\'openIdProvider\']/option");		//Locating openIdProvider object
+	By linkOrangeHRM = By.xpath("//a[contains(text(),'OrangeHRM, Inc')]");	//Locating linkOrangeHRM
+	By logolinkedin = By.xpath("//a[1]//img[1]");							//Locating logo linkedin object
+	By logoFacebook = By.xpath("//a[2]//img[1]");							//Locating logo Facebook object
+	By logoTweeter = By.xpath("//a[3]//img[1]");							//Locating logo Tweeter object
+	By logoYoutube = By.xpath("//a[4]//img[1]");							//Locating logo Youtube object
 
 	public LoginPage(WebDriver driver) {									//Constructor that is getting the WebDriver
 		this.driver=driver;													//Initializing the WebDriver
