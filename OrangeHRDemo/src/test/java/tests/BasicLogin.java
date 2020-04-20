@@ -5,6 +5,7 @@
 package tests;
 import baseUtilClass.*;										//To use WebDriverInit , ScreenshotManager
 import screenShotPrintScreen.ScreenshotManager;
+import baseUtilClass.extentReportsInit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
