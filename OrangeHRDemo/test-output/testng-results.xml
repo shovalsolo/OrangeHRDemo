@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
     <line>
       <![CDATA[=======setUp Started=======]]>
@@ -17,21 +17,42 @@
       <![CDATA[=======Login Started=======]]>
     </line>
     <line>
+      <![CDATA[=======Login Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======loginToOrangeHR Failed=======]]>
+    </line>
+    <line>
       <![CDATA[=======Login Ended=======]]>
+    </line>
+    <line>
+      <![CDATA[=======checkAbout Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======clickOnAbout Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======clickOnAbout Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======clickOnwelcomeAdmin Started=======]]>
+    </line>
+    <line>
+      <![CDATA[=======checkAbout Failed=======]]>
     </line>
     <line>
       <![CDATA[=======tearDown Started=======]]>
     </line>
     <line>
-      <![CDATA[=======tearDown Ended=======]]>
+      <![CDATA[=======tearDown Failed=======]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17324" started-at="2020-03-26T16:37:25 EDT" finished-at="2020-03-26T16:37:43 EDT">
+  <suite name="Default suite" duration-ms="28400" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:44 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17324" started-at="2020-03-26T16:37:25 EDT" finished-at="2020-03-26T16:37:43 EDT">
-      <class name="tests.BasicLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.BasicLogin@305fd85d]" name="setUp" is-config="true" duration-ms="10422" started-at="2020-03-26T16:37:25 EDT" finished-at="2020-03-26T16:37:36 EDT">
+    <test name="Default test" duration-ms="28400" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:44 EDT">
+      <class name="tests.Logout">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.Logout@4493d195]" name="setUp" is-config="true" duration-ms="6532" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:22 EDT">
           <reporter-output>
             <line>
               <![CDATA[=======setUp Started=======]]>
@@ -47,27 +68,52 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginToOrangeHR()[pri:0, instance:tests.BasicLogin@305fd85d]" name="loginToOrangeHR" duration-ms="6125" started-at="2020-03-26T16:37:36 EDT" finished-at="2020-03-26T16:37:42 EDT">
+        <test-method status="PASS" signature="login()[pri:1, instance:tests.Logout@4493d195]" name="login" duration-ms="2469" started-at="2020-05-14T18:04:22 EDT" finished-at="2020-05-14T18:04:25 EDT">
           <reporter-output>
             <line>
               <![CDATA[=======Login Started=======]]>
             </line>
             <line>
+              <![CDATA[=======Login Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======loginToOrangeHR Failed=======]]>
+            </line>
+            <line>
               <![CDATA[=======Login Ended=======]]>
             </line>
           </reporter-output>
-        </test-method> <!-- loginToOrangeHR -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.BasicLogin@305fd85d]" name="tearDown" is-config="true" duration-ms="741" started-at="2020-03-26T16:37:42 EDT" finished-at="2020-03-26T16:37:43 EDT">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="checkAbout()[pri:2, instance:tests.Logout@4493d195]" name="checkAbout" duration-ms="15326" started-at="2020-05-14T18:04:25 EDT" finished-at="2020-05-14T18:04:40 EDT">
+          <reporter-output>
+            <line>
+              <![CDATA[=======checkAbout Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======clickOnAbout Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======clickOnAbout Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======clickOnwelcomeAdmin Started=======]]>
+            </line>
+            <line>
+              <![CDATA[=======checkAbout Failed=======]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- checkAbout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.Logout@4493d195]" name="tearDown" is-config="true" duration-ms="4033" started-at="2020-05-14T18:04:40 EDT" finished-at="2020-05-14T18:04:44 EDT">
           <reporter-output>
             <line>
               <![CDATA[=======tearDown Started=======]]>
             </line>
             <line>
-              <![CDATA[=======tearDown Ended=======]]>
+              <![CDATA[=======tearDown Failed=======]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.BasicLogin -->
+      </class> <!-- tests.Logout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
