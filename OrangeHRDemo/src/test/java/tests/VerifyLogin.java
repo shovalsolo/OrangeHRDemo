@@ -62,7 +62,7 @@ public class VerifyLogin {
 		}
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2)																		//Check About method
 	public void checkAbout(){
 		try {
 			Reporter.log("=======CheckAbout Started Logout=======",true);
@@ -72,6 +72,24 @@ public class VerifyLogin {
 		} 
 		catch (Exception e) {
 			Reporter.log("=======CheckAbout Failed Logout=======",true);
+			//ScreenshotManager.cuptureScreenshot(driver , "checkAbout-Failed");
+			e.printStackTrace();
+			System.out.println("Message is " + e.getMessage());								//Message of the exception
+			System.out.println("Cause is " + e.getCause());									//Cause of the exception
+		}
+	}
+	
+	@Test(priority = 3)
+	public void Logout(){																	//Logout method
+		try {
+			Reporter.log("=======Logout Started =======",true);
+			HeaderLogin Hlogin = new HeaderLogin(driver);
+			Hlogin.clickOnwelcomeAdmin();
+			Hlogin.clickOnLogout();
+			Reporter.log("=======Logout Ended=======",true);
+		} 
+		catch (Exception e) {
+			Reporter.log("=======Logout Failed=======",true);
 			//ScreenshotManager.cuptureScreenshot(driver , "checkAbout-Failed");
 			e.printStackTrace();
 			System.out.println("Message is " + e.getMessage());								//Message of the exception
@@ -96,5 +114,4 @@ public class VerifyLogin {
 			System.out.println("Cause is " + e.getCause());									//Cause of the exception
 		}
 	}
-
 }
