@@ -10,7 +10,7 @@ import org.testng.Reporter;
 
 public class LoginPage {
 	
-	WebDriver driver;
+	public static WebDriver driver = null;
 	
 	//Getting all the page objects to test
 	By username = By.xpath("//input[@id='txtUsername']");					//Locating Username object

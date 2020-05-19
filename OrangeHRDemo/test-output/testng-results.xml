@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[=======setUp Started=======]]>
+      <![CDATA[=======setUp Started VerifyLogin=======]]>
     </line>
     <line>
       <![CDATA[=======Initializing Chrome Started=======]]>
@@ -11,51 +11,57 @@
       <![CDATA[=======Initializing Chrome Ended=======]]>
     </line>
     <line>
-      <![CDATA[=======setUp Ended=======]]>
+      <![CDATA[=======setUp Ended VerifyLogin=======]]>
     </line>
     <line>
-      <![CDATA[=======Login Started=======]]>
+      <![CDATA[=======Login Started VerifyLogin=======]]>
     </line>
     <line>
-      <![CDATA[=======Login Started=======]]>
+      <![CDATA[=======loginToOrangeHRM Started=======]]>
     </line>
     <line>
-      <![CDATA[=======loginToOrangeHR Failed=======]]>
+      <![CDATA[=======Login Ended VerifyLogin=======]]>
     </line>
     <line>
-      <![CDATA[=======Login Ended=======]]>
+      <![CDATA[=======CheckAbout Started Logout=======]]>
     </line>
     <line>
-      <![CDATA[=======checkAbout Started=======]]>
+      <![CDATA[=======ClickOnCloseAbout Started=======]]>
     </line>
     <line>
-      <![CDATA[=======clickOnAbout Started=======]]>
+      <![CDATA[=======ClickOnAbout Started=======]]>
     </line>
     <line>
-      <![CDATA[=======clickOnAbout Started=======]]>
+      <![CDATA[=======ClickOnwelcomeAdmin Started=======]]>
     </line>
     <line>
-      <![CDATA[=======clickOnwelcomeAdmin Started=======]]>
+      <![CDATA[=======ClickOnwelcomeAdmin Ended=======]]>
     </line>
     <line>
-      <![CDATA[=======checkAbout Failed=======]]>
+      <![CDATA[=======ClickOnAbout Ended=======]]>
     </line>
     <line>
-      <![CDATA[=======tearDown Started=======]]>
+      <![CDATA[=======ClickOnCloseAbout Ended=======]]>
     </line>
     <line>
-      <![CDATA[=======tearDown Failed=======]]>
+      <![CDATA[=======CheckAbout Ended Logout=======]]>
+    </line>
+    <line>
+      <![CDATA[=======tearDown Started VerifyLogin=======]]>
+    </line>
+    <line>
+      <![CDATA[=======tearDown Ended VerifyLogin=======]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28400" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:44 EDT">
+  <suite name="Default suite" duration-ms="39895" started-at="2020-05-19T17:25:32 EDT" finished-at="2020-05-19T17:26:12 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28400" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:44 EDT">
-      <class name="tests.Logout">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.Logout@4493d195]" name="setUp" is-config="true" duration-ms="6532" started-at="2020-05-14T18:04:16 EDT" finished-at="2020-05-14T18:04:22 EDT">
+    <test name="Default test" duration-ms="39895" started-at="2020-05-19T17:25:32 EDT" finished-at="2020-05-19T17:26:12 EDT">
+      <class name="tests.VerifyLogin">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.VerifyLogin@4493d195]" name="setUp" is-config="true" duration-ms="6319" started-at="2020-05-19T17:25:32 EDT" finished-at="2020-05-19T17:25:38 EDT">
           <reporter-output>
             <line>
-              <![CDATA[=======setUp Started=======]]>
+              <![CDATA[=======setUp Started VerifyLogin=======]]>
             </line>
             <line>
               <![CDATA[=======Initializing Chrome Started=======]]>
@@ -64,56 +70,62 @@
               <![CDATA[=======Initializing Chrome Ended=======]]>
             </line>
             <line>
-              <![CDATA[=======setUp Ended=======]]>
+              <![CDATA[=======setUp Ended VerifyLogin=======]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:1, instance:tests.Logout@4493d195]" name="login" duration-ms="2469" started-at="2020-05-14T18:04:22 EDT" finished-at="2020-05-14T18:04:25 EDT">
+        <test-method status="PASS" signature="loginToOrangeHR()[pri:1, instance:tests.VerifyLogin@4493d195]" name="loginToOrangeHR" duration-ms="11606" started-at="2020-05-19T17:25:38 EDT" finished-at="2020-05-19T17:25:50 EDT">
           <reporter-output>
             <line>
-              <![CDATA[=======Login Started=======]]>
+              <![CDATA[=======Login Started VerifyLogin=======]]>
             </line>
             <line>
-              <![CDATA[=======Login Started=======]]>
+              <![CDATA[=======loginToOrangeHRM Started=======]]>
             </line>
             <line>
-              <![CDATA[=======loginToOrangeHR Failed=======]]>
-            </line>
-            <line>
-              <![CDATA[=======Login Ended=======]]>
+              <![CDATA[=======Login Ended VerifyLogin=======]]>
             </line>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="checkAbout()[pri:2, instance:tests.Logout@4493d195]" name="checkAbout" duration-ms="15326" started-at="2020-05-14T18:04:25 EDT" finished-at="2020-05-14T18:04:40 EDT">
+        </test-method> <!-- loginToOrangeHR -->
+        <test-method status="PASS" signature="checkAbout()[pri:2, instance:tests.VerifyLogin@4493d195]" name="checkAbout" duration-ms="21243" started-at="2020-05-19T17:25:50 EDT" finished-at="2020-05-19T17:26:11 EDT">
           <reporter-output>
             <line>
-              <![CDATA[=======checkAbout Started=======]]>
+              <![CDATA[=======CheckAbout Started Logout=======]]>
             </line>
             <line>
-              <![CDATA[=======clickOnAbout Started=======]]>
+              <![CDATA[=======ClickOnCloseAbout Started=======]]>
             </line>
             <line>
-              <![CDATA[=======clickOnAbout Started=======]]>
+              <![CDATA[=======ClickOnAbout Started=======]]>
             </line>
             <line>
-              <![CDATA[=======clickOnwelcomeAdmin Started=======]]>
+              <![CDATA[=======ClickOnwelcomeAdmin Started=======]]>
             </line>
             <line>
-              <![CDATA[=======checkAbout Failed=======]]>
+              <![CDATA[=======ClickOnwelcomeAdmin Ended=======]]>
+            </line>
+            <line>
+              <![CDATA[=======ClickOnAbout Ended=======]]>
+            </line>
+            <line>
+              <![CDATA[=======ClickOnCloseAbout Ended=======]]>
+            </line>
+            <line>
+              <![CDATA[=======CheckAbout Ended Logout=======]]>
             </line>
           </reporter-output>
         </test-method> <!-- checkAbout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.Logout@4493d195]" name="tearDown" is-config="true" duration-ms="4033" started-at="2020-05-14T18:04:40 EDT" finished-at="2020-05-14T18:04:44 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.VerifyLogin@4493d195]" name="tearDown" is-config="true" duration-ms="690" started-at="2020-05-19T17:26:11 EDT" finished-at="2020-05-19T17:26:12 EDT">
           <reporter-output>
             <line>
-              <![CDATA[=======tearDown Started=======]]>
+              <![CDATA[=======tearDown Started VerifyLogin=======]]>
             </line>
             <line>
-              <![CDATA[=======tearDown Failed=======]]>
+              <![CDATA[=======tearDown Ended VerifyLogin=======]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.Logout -->
+      </class> <!-- tests.VerifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

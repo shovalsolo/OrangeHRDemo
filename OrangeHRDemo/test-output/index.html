@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Solomon\AppData\Local\Temp\testng-eclipse--1986797169\testng-customsuite.xml</span>
+                    <span>C:\Users\Solomon\AppData\Local\Temp\testng-eclipse--2116168870\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,12 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.Logout" hash-for-method="checkAbout">checkAbout</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.VerifyLogin" hash-for-method="checkAbout">checkAbout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.Logout" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.VerifyLogin" hash-for-method="loginToOrangeHR">loginToOrangeHR</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,7 +125,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.Logout</span>
+              <span class="class-name">tests.VerifyLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -137,9 +137,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
+                  <a name="loginToOrangeHR">
+                  </a> <!-- loginToOrangeHR -->
+                  <span class="method-name">loginToOrangeHR</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,7 +147,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Solomon\AppData\Local\Temp\testng-eclipse--1986797169\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Solomon\AppData\Local\Temp\testng-eclipse--2116168870\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -156,7 +156,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.Logout&quot;/&gt;
+      &lt;class name=&quot;tests.VerifyLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -199,17 +199,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkAbout')
-data.setCell(0, 2, 'tests.Logout')
-data.setCell(0, 3, 15326);
+data.setCell(0, 2, 'tests.VerifyLogin')
+data.setCell(0, 3, 21243);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
-data.setCell(1, 2, 'tests.Logout')
-data.setCell(1, 3, 2469);
+data.setCell(1, 1, 'loginToOrangeHR')
+data.setCell(1, 2, 'tests.VerifyLogin')
+data.setCell(1, 3, 11606);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,22 +221,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">login</span>
+              <span class="reporter-method-name">loginToOrangeHR</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">=======Login Started=======</span>
-                <span class="reporter-method-output">=======Login Started=======</span>
-                <span class="reporter-method-output">=======loginToOrangeHR Failed=======</span>
-                <span class="reporter-method-output">=======Login Ended=======</span>
+                <span class="reporter-method-output">=======Login Started VerifyLogin=======</span>
+                <span class="reporter-method-output">=======loginToOrangeHRM Started=======</span>
+                <span class="reporter-method-output">=======Login Ended VerifyLogin=======</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">checkAbout</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">=======checkAbout Started=======</span>
-                <span class="reporter-method-output">=======clickOnAbout Started=======</span>
-                <span class="reporter-method-output">=======clickOnAbout Started=======</span>
-                <span class="reporter-method-output">=======clickOnwelcomeAdmin Started=======</span>
-                <span class="reporter-method-output">=======checkAbout Failed=======</span>
+                <span class="reporter-method-output">=======CheckAbout Started Logout=======</span>
+                <span class="reporter-method-output">=======ClickOnCloseAbout Started=======</span>
+                <span class="reporter-method-output">=======ClickOnAbout Started=======</span>
+                <span class="reporter-method-output">=======ClickOnwelcomeAdmin Started=======</span>
+                <span class="reporter-method-output">=======ClickOnwelcomeAdmin Ended=======</span>
+                <span class="reporter-method-output">=======ClickOnAbout Ended=======</span>
+                <span class="reporter-method-output">=======ClickOnCloseAbout Ended=======</span>
+                <span class="reporter-method-output">=======CheckAbout Ended Logout=======</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -254,22 +256,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.Logout</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.VerifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">login</span>
-                <span class="method-start">6544 ms</span>
+                <span class="method-name">loginToOrangeHR</span>
+                <span class="method-start">6330 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkAbout</span>
-                <span class="method-start">9020 ms</span>
+                <span class="method-start">17942 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24349 ms</span>
+                <span class="method-start">39187 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
