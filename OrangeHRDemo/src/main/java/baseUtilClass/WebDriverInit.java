@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -33,6 +34,7 @@ public class WebDriverInit {
 		if (driver == null) {
 			Reporter.log("=======Initializing browser no parameter Started=======",true);
 			ChromeOptions options = new ChromeOptions();						//Creating an object of Chrome options
+			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 			options.addArguments("--disable-notifications");					//Setting an argument to disable notifications in the browser
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);					//Setting PageLoadStrategy to none preventing the page from loading while executing
 			WebDriverManager.chromedriver().setup();							//Setting ChromeDriver
@@ -53,6 +55,7 @@ public class WebDriverInit {
 				Reporter.log("=======Initializing IE Started=======",true);
 				DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();									//Creating DesiredCapabilities
 				capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);	//Setting capabilities to ignore security domains
+				System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 				WebDriverManager.iedriver().setup();								//Setting driver to IE
 				driver = new InternetExplorerDriver(capabilities);					//Setting the driver to IE
 				driver.manage().window().maximize();								//Setting the window to maximum
@@ -73,6 +76,7 @@ public class WebDriverInit {
 			}
 			else if(browserName.equalsIgnoreCase("chrome")){
 				Reporter.log("=======Initializing Chrome Started=======",true);
+				System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 				WebDriverManager.chromedriver().setup();							//Setting the WebDriverManager
 				driver = new ChromeDriver();										//Setting the driver to ChromeDriver
 				driver.manage().window().maximize();								//Setting the window to maximum
@@ -84,6 +88,7 @@ public class WebDriverInit {
 			else {
 				WebDriverManager.chromedriver().setup();							//Setting the WebDriverManager
 				Reporter.log("=======Initializing Chrome Started=======",true);
+				System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 				driver = new ChromeDriver();										//Setting the driver to ChromeDriver
 				driver.manage().window().maximize();								//Setting the window to maximum
 				driver.manage().deleteAllCookies(); 								//Deleting all the cookies
